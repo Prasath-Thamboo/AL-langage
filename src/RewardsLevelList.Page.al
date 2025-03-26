@@ -2,7 +2,7 @@ page 50101 "Rewards Level List"
 
 {
 	PageType = List;
-	ContextSensitiveHelpPage = 'sales-rewards';
+	//ContextSensitiveHelpPage = 'sales-rewards';
 	SourceTable = "Reward Level";
 	SourceTableView = sorting("Minimum Reward Points") order(ascending);
 	ApplicationArea = All;
@@ -29,14 +29,14 @@ page 50101 "Rewards Level List"
 		}
 	}
 
-	trigger OnOpenPage();
-	begin
+	//trigger OnOpenPage();
+	//begin
 
-		if (not CustomerRewardsExtMgt.IsCustomerRewardsActivated) then
-			Error(NotActivatedTxt);
-	end;
+		//if (not CustomerRewardsExtMgt.IsCustomerRewardsActivated) then
+		//	Error(NotActivatedTxt);
+	//end;
 
-	var
-		CustomerRewardsExtMgt: Codeunit "Customer Rewards Ext Mgt";
-		NotActivatedTxt: Label 'Customer Rewards is not activated';
+	//var
+		//CustomerRewardsExtMgt: Codeunit "Customer Rewards Ext Mgt";
+		//NotActivatedTxt: Label 'Customer Rewards is not activated';
 }
